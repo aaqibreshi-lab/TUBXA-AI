@@ -6,7 +6,8 @@ const corsHeaders = {
   'Access-Control-Allow-Methods': 'POST, OPTIONS',
 };
 
-const MODEL = 'gemini-3.7-flash';
+// Stable Gemini model supported by the Gemini API.
+const MODEL = 'gemini-2.5-flash';
 
 Deno.serve(async (req) => {
   if (req.method === 'OPTIONS') return new Response('ok', { headers: corsHeaders });
